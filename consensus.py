@@ -1,8 +1,4 @@
 from construct import *
-from blockchain import BlockChain
-
-
-bc = BlockChain.instance()
 
 
 def verify_transaction(tx: Transaction):

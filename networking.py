@@ -1,17 +1,35 @@
 from core import *
-from socketserver import StreamRequestHandler
+from flask import Flask
+from flask_restful import Resource, Api
 
 
-class Node(StreamRequestHandler):
-	
-	def __init__(self, request, client_address, server):
-		super().__init__(request, client_address, server)
-
-	@ignore(SerializationFailure)
-	def handle(self):
-		pass
+app = Flask(__name__)
+api = Api(app)
 
 
-if __name__ == '__main__':
-	pass
+class Transaction(Resource):
+
+    def get(self, tx_id):
+        pass
+
+    def put(self, tx_id):
+        pass
+
+
+class Block(Resource):
+
+    def get(self, height):
+        pass
+
+    def put(self, height):
+        pass
+
+
+@app.route('/height')
+def chain_height():
+    pass
+
+
+api.add_resource(Transaction, '/transaction')
+api.add_resource(Block, '/block')
 
