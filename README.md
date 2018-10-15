@@ -1,2 +1,2 @@
 # xcv-ng
-Implementation of Causevest Cryptocurrency
+Implementation of Causevest Blockchain
